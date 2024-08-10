@@ -527,3 +527,15 @@ PRODUCT_PACKAGES += \
 
 # Inherit vendor
 $(call inherit-product, vendor/xiaomi/odin/odin-vendor.mk)
+
+# Camera
+$(call inherit-product-if-exists, vendor/xiaomi/miuicamera/MiuiCamera.mk)
+
+# GMS
+$(call inherit-product-if-exists, vendor/gms/gms.mk)
+
+# EXTRAS
+$(call inherit-product-if-exists, vendor/extras/extras.mk)
+
+# LineageOS
+TARGET_EXCLUDES_AUDIOFX := true
